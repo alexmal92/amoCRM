@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.964fdded.css",
-    "main.js": "/static/js/main.8206511c.js",
-    "static/js/787.9c3921be.chunk.js": "/static/js/787.9c3921be.chunk.js",
-    "index.html": "/index.html",
-    "main.964fdded.css.map": "/static/css/main.964fdded.css.map",
-    "main.8206511c.js.map": "/static/js/main.8206511c.js.map",
-    "787.9c3921be.chunk.js.map": "/static/js/787.9c3921be.chunk.js.map"
+    "main.css": "/amoCRM/static/css/main.964fdded.css",
+    "main.js": "/amoCRM/static/js/main.b963ffa4.js",
+    "static/js/787.9c3921be.chunk.js": "/amoCRM/static/js/787.9c3921be.chunk.js",
+    "index.html": "/amoCRM/index.html",
+    "main.964fdded.css.map": "/amoCRM/static/css/main.964fdded.css.map",
+    "main.b963ffa4.js.map": "/amoCRM/static/js/main.b963ffa4.js.map",
+    "787.9c3921be.chunk.js.map": "/amoCRM/static/js/787.9c3921be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.8206511c.js"
+    "static/js/main.b963ffa4.js"
   ]
 }
