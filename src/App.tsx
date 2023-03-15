@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState,ChangeEvent } from 'react'
+import './App.css'
+import { validator } from './helpers/validator'
+import { Timer } from './components/Timer'
 
-function App() {
+const App = () => {
+  const [value, setValue] = useState('')
+  const [seconds, setSeconds] = useState(0)
+  const [isRun, setIsRun] = useState(false)
+
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+    return setValue(validator(e.target.value))
+  }
+
+  const submit = () => {
+    setIsRun(!isRun)
+    setSeconds(+value)
+    setValue('')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Timer
+        seconds={seconds}
+        setSeconds={setSeconds}
+        isRun={isRun}
+        setIsRun={setIsRun}
+      />
+      <input
+        type='text'
+        value={value}
+        onChange={(e) => handleInput(e)}
+      />
+      <button onClick={() => submit()}>{isRun ? 'Stop' : 'Start'}</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
